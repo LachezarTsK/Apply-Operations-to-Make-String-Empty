@@ -19,8 +19,8 @@ public class Solution {
 
         Arrays.sort(characterData,
                         (x, y) -> (y.frequency == x.frequency)
-                        ? (x.lastIndexOfOccurrence - y.lastIndexOfOccurrence)
-                        : (y.frequency - x.frequency));
+                                ? (x.lastIndexOfOccurrence - y.lastIndexOfOccurrence)
+                                : (y.frequency - x.frequency));
 
         int maxFrequency = Arrays.stream(characterData).max(
                           (x, y) -> x.frequency - y.frequency).get().frequency;
